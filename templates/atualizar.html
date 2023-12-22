@@ -6,7 +6,7 @@
 <body>
     <h1>Atualizar Prato</h1>
     <p>Preencha o formulário abaixo para atualizar o prato selecionado.</p>
-    <form method="POST" action="{{ url_for('atualizar', prato_id=prato._id) }}">
+    <form method="POST" action="{{ url_for('pratos.atualizar', prato_id=prato._id) }}">
         <label for="id">ID:</label>
         <input type="text" id="id" name="id" value="{{ prato.id }}" required>
         <label for="nome">Nome:</label>
@@ -17,7 +17,7 @@
         <input type="number" id="preco" name="preco" value="{{ prato.preco }}" required>
         <input type="submit" value="Atualizar">
     </form>
-    <a href="{{ url_for('index') }}">Voltar ao cardápio</a>
+    <a href="{{ url_for('pratos.index') }}">Voltar ao cardápio</a>
 </body>
 </html>
 

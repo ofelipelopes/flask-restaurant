@@ -1,0 +1,56 @@
+<!-- index.html -->
+<html>
+<head>
+    <title>Cardápio de Restaurante</title>
+</head>
+<body>
+    <h1>Cardápio de Restaurante</h1>
+    <p>Aqui você pode ver, adicionar, atualizar e deletar os pratos do cardápio.</p>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Ingredientes</th>
+            <th>Preço</th>
+            <th>Ações</th>
+        </tr>
+        {% for prato in pratos %}
+        <tr>
+            <td>{{ prato.id }}</td>
+            <td>{{ prato.nome }}</td>
+            <td>{{ prato.ingredientes }}</td>
+            <td>{{ prato.preco }}</td>
+            <td>
+                <a href="{{ url_for('atualizar', prato_id=prato._id) }}">Atualizar</a>
+                <a href="{{ url_for('deletar', prato_id=prato._id) }}">Deletar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('adicionar') }}">Adicionar novo prato</a>
+</body>
+</html>
+
+
+
+
+<!-- <html>
+<head>
+    <title>Cardápio de Restaurante</title>
+</head>
+<body>
+    <h1>Cardápio de Restaurante</h1>
+    <a href="{{ url_for('adicionar') }}">Adicionar um novo prato</a>
+    <ul>
+        {% for prato in pratos %}
+        <li>
+            <h2>{{ prato.nome }}</h2>
+            <p>Ingredientes: {{ prato.ingredientes }}</p>
+            <p>Preço: {{ prato.preco }}</p>
+            <a href="{{ url_for('atualizar', id=prato._id) }}">Atualizar</a>
+            <a href="{{ url_for('deletar', id=prato._id) }}">Deletar</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html> -->

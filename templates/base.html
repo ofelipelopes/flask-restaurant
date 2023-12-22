@@ -1,0 +1,22 @@
+<!-- base.html -->
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div id="header">
+        {% block header %}
+        <h1>Cardápio de Restaurante</h1>
+        {% endblock %}
+    </div>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div id="footer">
+        {% block footer %}
+        <p>Desenvolvido por Bing</p>
+        {% endblock %}
+    </div>
+</body>
+</html>

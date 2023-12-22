@@ -6,7 +6,7 @@
 <body>
     <h1>Adicionar Prato</h1>
     <p>Preencha o formulário abaixo para adicionar um novo prato ao cardápio.</p>
-    <form method="POST" action="{{ url_for('adicionar') }}">
+    <form method="POST" action="{{ url_for('pratos.adicionar') }}">
         <label for="id">ID:</label>
         <input type="text" id="id" name="id" required>
         <label for="nome">Nome:</label>
@@ -17,6 +17,6 @@
         <input type="number" id="preco" name="preco" required>
         <input type="submit" value="Adicionar">
     </form>
-    <a href="{{ url_for('index') }}">Voltar ao cardápio</a>
+    <a href="{{ url_for('pratos.index') }}">Voltar ao cardápio</a>
 </body>
 </html>
